@@ -3,42 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Agri Sukses Exportindo - Global B2B Supplier</title>
+    <title>PT Agri Sukses Exportindo - Premium B2B Supplier</title>
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Google Fonts: Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body { font-family: 'Poppins', sans-serif; color: #333; }
-        .navbar-custom { background-color: #0d4722; padding: 15px 0; }
-        .navbar-custom .navbar-brand { font-weight: 700; color: #f8b400; font-size: 1.5rem; }
-        .navbar-custom .nav-link { color: #fff; font-weight: 400; margin: 0 10px; }
-        .btn-cta { background-color: #f8b400; color: #0d4722; font-weight: 600; border: none; padding: 8px 24px; border-radius: 30px; }
+        body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
+        
+        /* Navbar */
+        .navbar-custom { background-color: #0d4722; padding: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.3s; }
+        .navbar-custom .navbar-brand { font-weight: 700; color: #f8b400; font-size: 1.6rem; letter-spacing: 1px; }
+        .navbar-custom .nav-link { color: #fff; font-weight: 400; margin: 0 12px; text-transform: uppercase; font-size: 0.9rem; }
+        .navbar-custom .nav-link:hover { color: #f8b400; }
+        
+        /* Buttons */
+        .btn-cta { background-color: #f8b400; color: #0d4722; font-weight: 700; border: none; padding: 10px 28px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; box-shadow: 0 4px 15px rgba(248, 180, 0, 0.4); }
+        .btn-cta:hover { background-color: #e5a700; transform: translateY(-2px); color: #0d4722; }
+        
+        /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(13, 71, 34, 0.8), rgba(13, 71, 34, 0.7)), 
-                        url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&q=80') center/cover;
-            height: 85vh; display: flex; align-items: center; color: white;
+            background: linear-gradient(rgba(13, 71, 34, 0.85), rgba(13, 71, 34, 0.7)), 
+                        url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            height: 90vh; display: flex; align-items: center; color: white;
         }
-        .product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
-        .product-card:hover { transform: translateY(-10px); }
-        .product-img { height: 250px; object-fit: cover; width: 100%; }
-        footer { background-color: #0a3318; color: #ccc; }
+        
+        /* Stats Ribbon */
+        .stats-ribbon { background-color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-radius: 15px; transform: translateY(-50%); padding: 35px 20px; position: relative; z-index: 10; }
+        
+        /* About Section */
+        .about-section { padding: 80px 0 40px; }
+        .cert-logo { width: 80px; filter: grayscale(100%); opacity: 0.7; transition: 0.3s; margin: 0 15px; }
+        .cert-logo:hover { filter: grayscale(0%); opacity: 1; }
+
+        /* Catalog & Filter */
+        .filter-btn { border-radius: 50px; padding: 6px 20px; margin: 0 5px 10px; font-weight: 600; }
+        .filter-btn.active { background-color: #0d4722; color: white; border-color: #0d4722; }
+        
+        .product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06); transition: all 0.3s ease; height: 100%; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
+        .product-img { height: 220px; object-fit: cover; width: 100%; transition: transform 0.5s; }
+        .product-card:hover .product-img { transform: scale(1.05); }
+        .product-badge { position: absolute; top: 15px; right: 15px; z-index: 2; font-size: 0.8rem; padding: 5px 12px; border-radius: 20px; }
+        
+        /* Footer */
+        footer { background-color: #072913; color: #a5b1a9; }
+        footer h5 { color: #f8b400; font-weight: 600; margin-bottom: 20px; }
+        footer a { color: #a5b1a9; text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: #f8b400; }
     </style>
 </head>
 <body>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fa-solid fa-leaf me-2"></i>AGRI SUKSES</a>
-            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars fs-2"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#catalog">Commodities</a></li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <!-- Tombol untuk memicu Modal Form -->
-                        <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#quoteModal">Request Quote</button>
+                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+                        <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('General Partnership')">Request Quote</button>
                     </li>
                 </ul>
             </div>
@@ -48,106 +84,299 @@
     <!-- Hero Section -->
     <section class="hero-section text-center text-lg-start">
         <div class="container">
-            <div class="row"><div class="col-lg-8">
-                <h1 class="display-4 fw-bold mb-3">Global Supplier of Premium Indonesian Commodities</h1>
-                <p class="lead mb-4">Exporting high-quality spices, coffee, and cocoa directly from local farmers to the global market.</p>
-                <a href="#catalog" class="btn btn-cta btn-lg me-3 px-4">View Catalog</a>
-            </div></div>
-        </div>
-    </section>
-
-    <!-- Catalog -->
-    <section id="catalog" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="fw-bold text-center mb-5" style="color: #0d4722;">Our Main Commodities</h2>
-            <div class="row">
-                <!-- Kopi -->
-                <div class="col-md-4 mb-4">
-                    <div class="card product-card">
-                        <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Coffee">
-                        <div class="card-body p-4 text-center">
-                            <span class="badge bg-success mb-2">Coffee</span>
-                            <h5 class="fw-bold">Green Coffee Beans</h5>
-                            <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Green Coffee Beans')">Inquiry Now</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Rempah -->
-                <div class="col-md-4 mb-4">
-                    <div class="card product-card">
-                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Spices">
-                        <div class="card-body p-4 text-center">
-                            <span class="badge bg-warning text-dark mb-2">Spices</span>
-                            <h5 class="fw-bold">Indonesian Spices</h5>
-                            <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Indonesian Spices')">Inquiry Now</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Kakao -->
-                <div class="col-md-4 mb-4">
-                    <div class="card product-card">
-                        <img src="https://images.unsplash.com/photo-1613919658055-fb5d070b43f1?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Cocoa">
-                        <div class="card-body p-4 text-center">
-                            <span class="badge" style="background-color: #6f4e37;">Cocoa</span>
-                            <h5 class="fw-bold">Raw Cocoa Beans</h5>
-                            <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Raw Cocoa Beans')">Inquiry Now</button>
-                        </div>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-md-10 mx-auto mx-lg-0">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">#1 Trusted Indonesian Exporter</span>
+                    <h1 class="display-4 fw-bold mb-3 lh-sm">Connecting Indonesia's Finest Harvest to the World</h1>
+                    <p class="lead mb-4 fw-light">We source, process, and export premium-grade spices, coffee, cocoa, and agricultural derivatives directly from local farmers to global B2B markets.</p>
+                    <a href="#catalog" class="btn btn-cta btn-lg me-3"><i class="fa-solid fa-box-open me-2"></i>Explore Catalog</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modal Form Inquiry (Akan muncul saat tombol diklik) -->
-    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Stats Ribbon -->
+    <div class="container">
+        <div class="row stats-ribbon text-center mx-2 mx-lg-0">
+            <div class="col-md-3 col-6 border-end mb-3 mb-md-0">
+                <h2 class="text-success fw-bold"><i class="fa-solid fa-globe me-2"></i>15+</h2>
+                <p class="text-muted small fw-bold text-uppercase mb-0">Countries</p>
+            </div>
+            <div class="col-md-3 col-6 border-end mb-3 mb-md-0">
+                <h2 class="text-success fw-bold"><i class="fa-solid fa-tractor me-2"></i>50+</h2>
+                <p class="text-muted small fw-bold text-uppercase mb-0">Farm Partners</p>
+            </div>
+            <div class="col-md-3 col-6 border-end">
+                <h2 class="text-success fw-bold"><i class="fa-solid fa-scale-balanced me-2"></i>10K+</h2>
+                <p class="text-muted small fw-bold text-uppercase mb-0">Tons Exported</p>
+            </div>
+            <div class="col-md-3 col-6">
+                <h2 class="text-success fw-bold"><i class="fa-solid fa-certificate me-2"></i>100%</h2>
+                <p class="text-muted small fw-bold text-uppercase mb-0">Quality Assured</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section bg-white">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold" style="color: #0d4722;">Why Choose PT Agri Sukses?</h2>
+                    <p class="text-muted mt-3 mb-5">We cut the middlemen. By partnering directly with local farmers across the Indonesian archipelago, we ensure fair trade practices while providing our B2B clients with the most competitive CIF/FOB pricing.</p>
                 </div>
-                <div class="modal-body">
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section (Complex Grid with Filters) -->
+    <section id="catalog" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold" style="color: #0d4722;">Our Product Catalog</h2>
+                <p class="text-muted">Select a category to filter our premium commodities.</p>
+            </div>
+            
+            <!-- Filter Buttons -->
+            <div class="text-center mb-5">
+                <button class="btn btn-outline-success filter-btn active" data-filter="all">All Products</button>
+                <button class="btn btn-outline-success filter-btn" data-filter="coffee">Coffee</button>
+                <button class="btn btn-outline-success filter-btn" data-filter="spices">Spices</button>
+                <button class="btn btn-outline-success filter-btn" data-filter="cocoa">Cocoa</button>
+                <button class="btn btn-outline-success filter-btn" data-filter="other">Others</button>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row" id="productGrid">
+                
+                <!-- 1. Arabica Coffee -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item coffee">
+                    <div class="card product-card position-relative">
+                        <span class="badge bg-success product-badge">Coffee</span>
+                        <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Arabica Coffee">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Sumatra Arabica</h5>
+                            <p class="text-muted small flex-grow-1">Grade 1 green coffee beans. Famous for its earthy and complex flavor profile.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Sumatra Arabica Green Beans')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Robusta Coffee -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item coffee">
+                    <div class="card product-card position-relative">
+                        <span class="badge bg-success product-badge">Coffee</span>
+                        <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Robusta Coffee">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Java Robusta</h5>
+                            <p class="text-muted small flex-grow-1">Strong body and low acidity. Perfect for espresso blends and instant coffee manufacturing.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Java Robusta Green Beans')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Cinnamon -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item spices">
+                    <div class="card product-card position-relative">
+                        <span class="badge bg-warning text-dark product-badge">Spices</span>
+                        <img src="https://images.unsplash.com/photo-1550258859-6a95079555c4?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Cinnamon Sticks">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Cassia Cinnamon</h5>
+                            <p class="text-muted small flex-grow-1">High-quality rolled cinnamon sticks (Cassia Vera) from Kerinci, Jambi.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Cassia Cinnamon Sticks')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Black Pepper -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item spices">
+                    <div class="card product-card position-relative">
+                        <span class="badge bg-warning text-dark product-badge">Spices</span>
+                        <img src="https://images.unsplash.com/photo-1506049755106-de0281b671b5?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Black Pepper">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Lampung Black Pepper</h5>
+                            <p class="text-muted small flex-grow-1">Premium whole black peppercorns with bold aroma and high piperine content.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Lampung Black Peppercorn')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Vanilla Beans -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item spices">
+                    <div class="card product-card position-relative">
+                        <span class="badge bg-warning text-dark product-badge">Spices</span>
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Vanilla Beans">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Planifolia Vanilla</h5>
+                            <p class="text-muted small flex-grow-1">Gourmet grade Indonesian vanilla beans, highly moist and rich in vanillin.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Planifolia Vanilla Beans')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Raw Cocoa -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item cocoa">
+                    <div class="card product-card position-relative">
+                        <span class="badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
+                        <img src="https://images.unsplash.com/photo-1613919658055-fb5d070b43f1?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Raw Cocoa">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Fermented Cocoa Beans</h5>
+                            <p class="text-muted small flex-grow-1">Well-fermented and sun-dried raw cocoa beans from Sulawesi.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Fermented Cocoa Beans')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Cocoa Powder -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item cocoa">
+                    <div class="card product-card position-relative">
+                        <span class="badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
+                        <img src="https://images.unsplash.com/photo-1511384074212-30cb1050e505?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Cocoa Powder">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Alkalized Cocoa Powder</h5>
+                            <p class="text-muted small flex-grow-1">Processed industrial-grade cocoa powder with deep color and rich chocolate flavor.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Alkalized Cocoa Powder')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Coconut Charcoal -->
+                <div class="col-lg-3 col-md-6 mb-4 product-item other">
+                    <div class="card product-card position-relative">
+                        <span class="badge bg-secondary product-badge">Other</span>
+                        <img src="https://images.unsplash.com/photo-1526315865481-2292f7e02e07?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Coconut">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="fw-bold text-dark">Coconut Briquettes</h5>
+                            <p class="text-muted small flex-grow-1">100% natural coconut shell charcoal briquettes for Shisha/Hookah & BBQ. Long burning.</p>
+                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Coconut Charcoal Briquettes')">Request Info</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Modal (Pop-up) -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header text-white" style="background-color: #0d4722;">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-envelope-open-text me-2"></i>Send B2B Inquiry</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
                     <form id="inquiryForm">
-                        <div class="mb-3">
-                            <label class="form-label">Full Name</label>
-                            <input type="text" class="form-control" required placeholder="John Doe">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold small">Full Name</label>
+                                <input type="text" class="form-control bg-light" required placeholder="John Doe">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold small">Company Name</label>
+                                <input type="text" class="form-control bg-light" required placeholder="Global Import LLC">
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Company Name</label>
-                            <input type="text" class="form-control" required placeholder="Global Import LLC">
+                            <label class="form-label fw-semibold small">Email Address</label>
+                            <input type="email" class="form-control bg-light" required placeholder="john@company.com">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Product of Interest</label>
-                            <input type="text" class="form-control" id="productField" value="General Inquiry" readonly>
+                            <label class="form-label fw-semibold small">Product of Interest</label>
+                            <!-- Input ini akan otomatis terisi oleh JavaScript berdasarkan tombol yang diklik -->
+                            <input type="text" class="form-control fw-bold text-success" id="productField" readonly>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-control" rows="3" required placeholder="I need 2 tons of..."></textarea>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold small">Specification & Quantity Requirement</label>
+                            <textarea class="form-control bg-light" rows="3" required placeholder="E.g., We need 1 FCL 20ft container to port of Rotterdam..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success w-100">Send Request</button>
+                        <button type="submit" class="btn btn-cta w-100 rounded-3">Submit Inquiry <i class="fa-solid fa-paper-plane ms-2"></i></button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Script Bootstrap & Simulasi Interaktif form -->
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h4 class="text-white fw-bold mb-3"><i class="fa-solid fa-leaf text-warning me-2"></i>AGRI SUKSES</h4>
+                    <p class="small pe-lg-5">Bridging Indonesian agriculture to the world. We are committed to sustainability, quality assurance, and providing the best sourcing experience for our global partners.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="#">Company Profile</a></li>
+                        <li class="mb-2"><a href="#catalog">Our Commodities</a></li>
+                        <li class="mb-2"><a href="#">Quality Control & Export Terms</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><i class="fa-solid fa-envelope me-2 text-warning"></i> export@agrisuksesexportindo.com</li>
+                        <li class="mb-2"><i class="fa-solid fa-phone me-2 text-warning"></i> +62-822-2151-1561</li>
+                        <li class="mb-2"><i class="fa-solid fa-map-location-dot me-2 text-warning"></i> Ciganjur, South Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary mt-4 mb-4">
+            <div class="text-center small">
+                &copy; 2026 PT Agri Sukses Exportindo. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap & Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Fungsi untuk mengisi nama produk ke form secara otomatis
+        // 1. Script untuk Filter Kategori
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productItems = document.querySelectorAll('.product-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Hapus class 'active' dari semua tombol, lalu tambahkan ke tombol yg diklik
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Ambil nilai data-filter (contoh: 'coffee', 'spices')
+                const filterValue = btn.getAttribute('data-filter');
+
+                // Tampilkan/sembunyikan produk sesuai kategori
+                productItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 2. Script untuk mengisi form secara otomatis
         function setProduct(productName) {
             document.getElementById('productField').value = productName;
         }
 
-        // Simulasi pengiriman form (Agar di video terlihat berfungsi)
+        // 3. Script Simulasi Submit Form (Untuk Demo Video)
         document.getElementById('inquiryForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Mencegah reload halaman
-            alert('Success! Your inquiry has been sent to PT Agri Sukses Exportindo.');
+            e.preventDefault(); 
             
-            // Menutup modal & reset form
-            var modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
-            modal.hide();
-            this.reset();
+            // Ubah teks tombol sementara agar terlihat seperti sedang loading
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            
+            setTimeout(() => {
+                alert('Success! Your inquiry has been routed securely to our sales team. We will reply within 24 hours.');
+                var modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
+                modal.hide();
+                this.reset();
+                submitBtn.innerHTML = originalText;
+            }, 800); // Simulasi loading 0.8 detik
         });
     </script>
 </body>
