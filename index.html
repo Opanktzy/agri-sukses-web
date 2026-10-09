@@ -15,18 +15,15 @@
         .navbar-custom { background-color: #0d4722; padding: 15px 0; }
         .navbar-custom .navbar-brand { font-weight: 700; color: #f8b400; font-size: 1.5rem; }
         .navbar-custom .nav-link { color: #fff; font-weight: 400; margin: 0 10px; }
-        .navbar-custom .nav-link:hover { color: #f8b400; }
         .btn-cta { background-color: #f8b400; color: #0d4722; font-weight: 600; border: none; padding: 8px 24px; border-radius: 30px; }
         .hero-section {
             background: linear-gradient(rgba(13, 71, 34, 0.8), rgba(13, 71, 34, 0.7)), 
                         url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1920&q=80') center/cover;
             height: 85vh; display: flex; align-items: center; color: white;
         }
-        .stats-ribbon { background-color: #fff; box-shadow: 0 -10px 30px rgba(0,0,0,0.05); border-radius: 10px; transform: translateY(-50%); padding: 30px 20px; }
         .product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s; }
         .product-card:hover { transform: translateY(-10px); }
         .product-img { height: 250px; object-fit: cover; width: 100%; }
-        .feature-icon { font-size: 3rem; color: #f8b400; margin-bottom: 20px; }
         footer { background-color: #0a3318; color: #ccc; }
     </style>
 </head>
@@ -35,14 +32,14 @@
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#"><i class="fa-solid fa-leaf me-2"></i>AGRI SUKSES</a>
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Commodities</a></li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0"><button class="btn btn-cta">Request Quote</button></li>
+                    <li class="nav-item"><a class="nav-link" href="#catalog">Commodities</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <!-- Tombol untuk memicu Modal Form -->
+                        <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#quoteModal">Request Quote</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -54,52 +51,46 @@
             <div class="row"><div class="col-lg-8">
                 <h1 class="display-4 fw-bold mb-3">Global Supplier of Premium Indonesian Commodities</h1>
                 <p class="lead mb-4">Exporting high-quality spices, coffee, and cocoa directly from local farmers to the global market.</p>
-                <a href="#" class="btn btn-cta btn-lg me-3 px-4">View Catalog</a>
+                <a href="#catalog" class="btn btn-cta btn-lg me-3 px-4">View Catalog</a>
             </div></div>
         </div>
     </section>
 
-    <!-- Stats -->
-    <div class="container">
-        <div class="row stats-ribbon text-center mx-3 mx-lg-0">
-            <div class="col-md-4 stat-item border-end mb-3 mb-md-0"><h3 class="text-success fw-bold">15+</h3><p class="text-muted mb-0">Countries Exported</p></div>
-            <div class="col-md-4 stat-item border-end mb-3 mb-md-0"><h3 class="text-success fw-bold">100%</h3><p class="text-muted mb-0">Organic Certified</p></div>
-            <div class="col-md-4 stat-item"><h3 class="text-success fw-bold">50+</h3><p class="text-muted mb-0">Local Farm Partners</p></div>
-        </div>
-    </div>
-
     <!-- Catalog -->
-    <section class="py-5 bg-light">
+    <section id="catalog" class="py-5 bg-light">
         <div class="container">
             <h2 class="fw-bold text-center mb-5" style="color: #0d4722;">Our Main Commodities</h2>
             <div class="row">
+                <!-- Kopi -->
                 <div class="col-md-4 mb-4">
                     <div class="card product-card">
                         <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Coffee">
                         <div class="card-body p-4 text-center">
                             <span class="badge bg-success mb-2">Coffee</span>
                             <h5 class="fw-bold">Green Coffee Beans</h5>
-                            <p class="text-muted small">Premium Arabica & Robusta from Sumatra and Java.</p>
+                            <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Green Coffee Beans')">Inquiry Now</button>
                         </div>
                     </div>
                 </div>
+                <!-- Rempah -->
                 <div class="col-md-4 mb-4">
                     <div class="card product-card">
                         <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Spices">
                         <div class="card-body p-4 text-center">
                             <span class="badge bg-warning text-dark mb-2">Spices</span>
                             <h5 class="fw-bold">Indonesian Spices</h5>
-                            <p class="text-muted small">High-grade Vanilla beans, Cinnamon, and Black Pepper.</p>
+                            <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Indonesian Spices')">Inquiry Now</button>
                         </div>
                     </div>
                 </div>
+                <!-- Kakao -->
                 <div class="col-md-4 mb-4">
                     <div class="card product-card">
                         <img src="https://images.unsplash.com/photo-1613919658055-fb5d070b43f1?auto=format&fit=crop&w=600&q=80" class="product-img" alt="Cocoa">
                         <div class="card-body p-4 text-center">
                             <span class="badge" style="background-color: #6f4e37;">Cocoa</span>
                             <h5 class="fw-bold">Raw Cocoa Beans</h5>
-                            <p class="text-muted small">Fermented raw cocoa beans for chocolate manufacturing.</p>
+                            <button class="btn btn-outline-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Raw Cocoa Beans')">Inquiry Now</button>
                         </div>
                     </div>
                 </div>
@@ -107,12 +98,57 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-4 text-center">
-        <div class="container">
-            <p class="mb-0">&copy; 2026 PT Agri Sukses Exportindo. All Rights Reserved.</p>
-            <p class="small mt-1">export@agrisuksesexportindo.com | +62-822-2151-1561</p>
+    <!-- Modal Form Inquiry (Akan muncul saat tombol diklik) -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="inquiryForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required placeholder="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Company Name</label>
+                            <input type="text" class="form-control" required placeholder="Global Import LLC">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Product of Interest</label>
+                            <input type="text" class="form-control" id="productField" value="General Inquiry" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="3" required placeholder="I need 2 tons of..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Send Request</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+
+    <!-- Script Bootstrap & Simulasi Interaktif form -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fungsi untuk mengisi nama produk ke form secara otomatis
+        function setProduct(productName) {
+            document.getElementById('productField').value = productName;
+        }
+
+        // Simulasi pengiriman form (Agar di video terlihat berfungsi)
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah reload halaman
+            alert('Success! Your inquiry has been sent to PT Agri Sukses Exportindo.');
+            
+            // Menutup modal & reset form
+            var modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
+            modal.hide();
+            this.reset();
+        });
+    </script>
 </body>
 </html>
