@@ -47,12 +47,9 @@
         .product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06); transition: all 0.3s ease; height: 100%; }
         .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
         
-        /* Image Placeholders */
-        .img-placeholder { height: 220px; width: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; text-align: center; padding: 20px; }
-        .bg-coffee { background-color: #4e342e; } /* Dark Brown */
-        .bg-spices { background-color: #e65100; } /* Orange */
-        .bg-cocoa { background-color: #3e2723; } /* Deep Brown */
-        .bg-other { background-color: #424242; } /* Dark Grey */
+        /* Image Setting for Local Assets */
+        .product-img { height: 220px; object-fit: cover; width: 100%; transition: transform 0.5s; }
+        .product-card:hover .product-img { transform: scale(1.05); }
 
         .product-badge { position: absolute; top: 15px; right: 15px; z-index: 2; font-size: 0.8rem; padding: 5px 12px; border-radius: 20px; }
         
@@ -157,7 +154,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 product-item coffee">
                     <div class="card product-card position-relative">
                         <span class="badge bg-success product-badge">Coffee</span>
-                        <div class="img-placeholder bg-coffee"><i class="fa-solid fa-mug-hot fa-2x me-2"></i>Sumatra Arabica</div>
+                        <img src="arabika.jpg" class="product-img" alt="Arabica Coffee">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Sumatra Arabica</h5>
                             <p class="text-muted small flex-grow-1">Grade 1 green coffee beans. Famous for its earthy and complex flavor profile.</p>
@@ -170,7 +167,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 product-item coffee">
                     <div class="card product-card position-relative">
                         <span class="badge bg-success product-badge">Coffee</span>
-                        <div class="img-placeholder bg-coffee"><i class="fa-solid fa-mug-hot fa-2x me-2"></i>Java Robusta</div>
+                        <img src="robusta.jpg" class="product-img" alt="Robusta Coffee">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Java Robusta</h5>
                             <p class="text-muted small flex-grow-1">Strong body and low acidity. Perfect for espresso blends and instant coffee manufacturing.</p>
@@ -183,7 +180,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 product-item spices">
                     <div class="card product-card position-relative">
                         <span class="badge bg-warning text-dark product-badge">Spices</span>
-                        <div class="img-placeholder bg-spices"><i class="fa-solid fa-seedling fa-2x me-2"></i>Cassia Cinnamon</div>
+                        <img src="cinnamon.jpg" class="product-img" alt="Cassia Cinnamon">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Cassia Cinnamon</h5>
                             <p class="text-muted small flex-grow-1">High-quality rolled cinnamon sticks (Cassia Vera) from Kerinci, Jambi.</p>
@@ -196,7 +193,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 product-item spices">
                     <div class="card product-card position-relative">
                         <span class="badge bg-warning text-dark product-badge">Spices</span>
-                        <div class="img-placeholder bg-spices"><i class="fa-solid fa-pepper-hot fa-2x me-2"></i>Black Pepper</div>
+                        <img src="pepper.jpg" class="product-img" alt="Black Pepper">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Lampung Black Pepper</h5>
                             <p class="text-muted small flex-grow-1">Premium whole black peppercorns with bold aroma and high piperine content.</p>
@@ -209,7 +206,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 product-item spices">
                     <div class="card product-card position-relative">
                         <span class="badge bg-warning text-dark product-badge">Spices</span>
-                        <div class="img-placeholder bg-spices"><i class="fa-solid fa-leaf fa-2x me-2"></i>Vanilla Beans</div>
+                        <img src="vanilla.jpg" class="product-img" alt="Vanilla Beans">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Planifolia Vanilla</h5>
                             <p class="text-muted small flex-grow-1">Gourmet grade Indonesian vanilla beans, highly moist and rich in vanillin.</p>
@@ -221,8 +218,8 @@
                 <!-- 6. Raw Cocoa -->
                 <div class="col-lg-3 col-md-6 mb-4 product-item cocoa">
                     <div class="card product-card position-relative">
-                        <span class="badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
-                        <div class="img-placeholder bg-cocoa"><i class="fa-solid fa-box-open fa-2x me-2"></i>Raw Cocoa Beans</div>
+                        <span class="badge product-badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
+                        <img src="cocoa-beans.jpg" class="product-img" alt="Raw Cocoa Beans">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Fermented Cocoa Beans</h5>
                             <p class="text-muted small flex-grow-1">Well-fermented and sun-dried raw cocoa beans from Sulawesi.</p>
@@ -234,8 +231,8 @@
                 <!-- 7. Cocoa Powder -->
                 <div class="col-lg-3 col-md-6 mb-4 product-item cocoa">
                     <div class="card product-card position-relative">
-                        <span class="badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
-                        <div class="img-placeholder bg-cocoa"><i class="fa-solid fa-bowl-food fa-2x me-2"></i>Cocoa Powder</div>
+                        <span class="badge product-badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
+                        <img src="cocoa-powder.jpg" class="product-img" alt="Cocoa Powder">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Alkalized Cocoa Powder</h5>
                             <p class="text-muted small flex-grow-1">Processed industrial-grade cocoa powder with deep color and rich chocolate flavor.</p>
@@ -248,7 +245,7 @@
                 <div class="col-lg-3 col-md-6 mb-4 product-item other">
                     <div class="card product-card position-relative">
                         <span class="badge bg-secondary product-badge">Other</span>
-                        <div class="img-placeholder bg-other"><i class="fa-solid fa-fire-flame-curved fa-2x me-2"></i>Coconut Charcoal</div>
+                        <img src="charcoal.jpg" class="product-img" alt="Coconut Charcoal">
                         <div class="card-body d-flex flex-column">
                             <h5 class="fw-bold text-dark">Coconut Briquettes</h5>
                             <p class="text-muted small flex-grow-1">100% natural coconut shell charcoal briquettes for Shisha/Hookah & BBQ. Long burning.</p>
