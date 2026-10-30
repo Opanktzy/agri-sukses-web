@@ -1,0 +1,11 @@
+# PT Agri Sukses Exportindo — public static website
+# All currently published content is public and may be crawled.
+User-agent: *
+Allow: /
+
+Sitemap: https://agri-sukses-web.vercel.app/sitemap.xml
+
+# Note: no private or authenticated routes are present in the current
+# one-page static deployment. If private routes are added later, list
+# their paths here, but protect confidential content with authentication;
+# robots.txt is not an access-control mechanism.

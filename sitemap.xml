@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://agri-sukses-web.vercel.app/</loc>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/arabika.jpg</image:loc>
+      <image:title>Sumatra Arabica coffee beans</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/robusta.jpg</image:loc>
+      <image:title>Java Robusta coffee beans</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/cinnamon.jpg</image:loc>
+      <image:title>Indonesian cassia cinnamon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/pepper.jpg</image:loc>
+      <image:title>Lampung black pepper</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/vanilla.jpg</image:loc>
+      <image:title>Indonesian planifolia vanilla beans</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/cocoa-beans.jpg</image:loc>
+      <image:title>Fermented Indonesian cocoa beans</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/cocoa-powder.jpg</image:loc>
+      <image:title>Alkalized cocoa powder</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://agri-sukses-web.vercel.app/charcoal.jpg</image:loc>
+      <image:title>Indonesian coconut charcoal briquettes</image:title>
+    </image:image>
+  </url>
+</urlset>
