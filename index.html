@@ -1,493 +1,304 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="qXLfvv_-dMDZ-s6ApEH6R11btURQvJwYeTT4f3wMs2M" />
-    <!-- SEO & Social Media Meta Tags -->
-    <title>PT Agri Sukses Exportindo - Premium B2B Supplier</title>
-    <meta name="description" content="Global supplier and exporter of premium Indonesian commodities: Arabica Coffee, Cassia Cinnamon, Black Pepper, and Raw Cocoa.">
-    <meta name="keywords" content="indonesian exporter, green coffee beans, cassia cinnamon, black pepper, cocoa beans, b2b supplier indonesia">
-    <meta property="og:title" content="PT Agri Sukses Exportindo - Global Supplier">
-    <meta property="og:description" content="Sourcing Indonesia's finest harvest for global B2B markets.">
-    <meta property="og:image" content="arabika.jpg">
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        body { font-family: 'Poppins', sans-serif; color: #333; overflow-x: hidden; }
-        
-        /* Navbar */
-        .navbar-custom { background-color: #0d4722; padding: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.3s; }
-        .navbar-custom .navbar-brand { font-weight: 700; color: #f8b400; font-size: 1.6rem; letter-spacing: 1px; }
-        .navbar-custom .nav-link { color: #fff; font-weight: 400; margin: 0 12px; text-transform: uppercase; font-size: 0.9rem; }
-        .navbar-custom .nav-link:hover { color: #f8b400; }
-        
-        /* Buttons */
-        .btn-cta { background-color: #f8b400; color: #0d4722; font-weight: 700; border: none; padding: 10px 28px; border-radius: 50px; text-transform: uppercase; transition: 0.3s; box-shadow: 0 4px 15px rgba(248, 180, 0, 0.4); }
-        .btn-cta:hover { background-color: #e5a700; transform: translateY(-2px); color: #0d4722; }
-        
-        /* Hero Section */
-        .hero-section {
-            background-color: #1a5632; 
-            background-image: radial-gradient(circle, #2a7a49 10%, #0d4722 90%);
-            height: 90vh; display: flex; align-items: center; color: white;
-        }
-        
-        /* Stats Ribbon & About */
-        .stats-ribbon { background-color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-radius: 15px; transform: translateY(-50%); padding: 35px 20px; position: relative; z-index: 10; }
-        .about-section { padding: 80px 0 40px; }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="qXLfvv_-dMDZ-s6ApEH6R11btURQvJwYeTT4f3wMs2M">
+  <meta name="description" content="Global supplier and exporter of premium Indonesian commodities: Arabica and Robusta coffee, cassia cinnamon, black pepper, vanilla, cocoa, and coconut briquettes.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d4722">
 
-        /* Timeline / Supply Chain */
-        .timeline-icon { width: 80px; height: 80px; background-color: #e8f5e9; color: #0d4722; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 15px; transition: 0.3s; }
-        .timeline-step:hover .timeline-icon { background-color: #0d4722; color: #f8b400; transform: scale(1.1); }
+  <title>PT Agri Sukses Exportindo | Indonesian Commodity Exporter</title>
+  <link rel="canonical" href="https://agri-sukses-web.vercel.app/">
 
-        /* Catalog & Filter */
-        .filter-btn { border-radius: 50px; padding: 6px 20px; margin: 0 5px 10px; font-weight: 600; }
-        .filter-btn.active { background-color: #0d4722; color: white; border-color: #0d4722; }
-        
-        .product-card { border: none; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06); transition: all 0.3s ease; height: 100%; }
-        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
-        
-        /* Image Setting */
-        .product-img { height: 220px; object-fit: cover; width: 100%; transition: transform 0.5s; }
-        .product-card:hover .product-img { transform: scale(1.05); }
-        .product-badge { position: absolute; top: 15px; right: 15px; z-index: 2; font-size: 0.8rem; padding: 5px 12px; border-radius: 20px; }
-        
-        /* Footer */
-        footer { background-color: #072913; color: #a5b1a9; }
-        footer h5 { color: #f8b400; font-weight: 600; margin-bottom: 20px; }
-        footer a { color: #a5b1a9; text-decoration: none; transition: 0.3s; }
-        footer a:hover { color: #f8b400; }
+  <!-- Social preview metadata: keep one authoritative set of Open Graph tags. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://agri-sukses-web.vercel.app/">
+  <meta property="og:title" content="PT Agri Sukses Exportindo | Indonesian Commodity Exporter">
+  <meta property="og:description" content="Supplier and exporter of Indonesian coffee, spices, cocoa, and coconut briquettes for global B2B buyers.">
+  <meta property="og:image" content="https://agri-sukses-web.vercel.app/arabika.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PT Agri Sukses Exportindo | Indonesian Commodity Exporter">
+  <meta name="twitter:description" content="Explore Indonesian coffee, spices, cocoa, and coconut briquettes for global B2B sourcing.">
+  <meta name="twitter:image" content="https://agri-sukses-web.vercel.app/arabika.jpg">
 
-        /* Floating WhatsApp Button */
-        .float-wa { position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 15px rgba(0,0,0,0.2); z-index: 100; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; text-decoration: none;}
-        .float-wa:hover { background-color: #128C7E; color: #fff; transform: scale(1.1); }
-        
-        /* Google Translate Customization */
-        .goog-te-banner-frame.skiptranslate { display: none !important;} 
-        body { top: 0px !important; }
-        #google_translate_element select { border-radius: 20px; padding: 5px 10px; font-size: 0.8rem; border: none; outline: none; }
-    </style>
-    <!-- SEO canonical and social preview metadata for PT Agri Sukses Exportindo.
-     Place inside the existing <head> section of index.html.
-     Keep the existing <title> and description if you prefer; update values
-     here only when the canonical domain or page content changes. -->
-    <link rel="canonical" href="https://agri-sukses-web.vercel.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://agri-sukses-web.vercel.app/">
-    <meta property="og:title" content="PT Agri Sukses Exportindo | Indonesian Commodity Exporter">
-    <meta property="og:description" content="Supplier and exporter of Indonesian Arabica and Robusta coffee, spices, cocoa, and coconut briquettes for global B2B buyers.">
-    <meta property="og:image" content="https://agri-sukses-web.vercel.app/arabika.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PT Agri Sukses Exportindo | Indonesian Commodity Exporter">
-    <meta name="twitter:description" content="Explore Indonesian coffee, spices, cocoa, and coconut briquettes for global B2B sourcing.">
-    <meta name="twitter:image" content="https://agri-sukses-web.vercel.app/arabika.jpg">
+  <!-- Establish connections early so external CSS has less connection overhead. -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Search Console verification:
-     After Google Search Console gives you a unique meta tag, paste that
-     EXACT tag here (inside <head>), deploy, then click Verify in Search Console.
-     Do not use a guessed or placeholder verification token. -->
+  <!-- Load non-critical stylesheets without blocking the first render. -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></noscript>
 
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"></noscript>
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <style>
+    /* Small first-render stylesheet; Bootstrap and icon/font CSS are loaded asynchronously above. */
+    :root { color-scheme: light; --agri-green: #0d4722; --agri-gold: #f8b400; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: #333; font-family: "Poppins", Arial, sans-serif; overflow-x: hidden; }
+    .navbar-custom { background: var(--agri-green); padding: 15px 0; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+    .navbar-custom .navbar-brand { color: var(--agri-gold); font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; }
+    .navbar-custom .nav-link { color: #fff; font-size: .9rem; font-weight: 400; margin: 0 12px; text-transform: uppercase; }
+    .navbar-custom .nav-link:hover, .navbar-custom .nav-link:focus-visible { color: var(--agri-gold); }
+    .btn-cta { background: var(--agri-gold); color: var(--agri-green); border: 0; border-radius: 50px; padding: 10px 28px; font-weight: 700; text-transform: uppercase; box-shadow: 0 4px 15px rgba(248,180,0,.3); transition: background-color .2s ease, transform .2s ease; }
+    .btn-cta:hover, .btn-cta:focus-visible { background: #e5a700; color: var(--agri-green); transform: translateY(-2px); }
+    .hero-section { min-height: 90vh; display: flex; align-items: center; color: #fff; background: radial-gradient(circle, #2a7a49 10%, var(--agri-green) 90%); }
+    .stats-ribbon { position: relative; z-index: 2; padding: 35px 20px; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,.08); transform: translateY(-50%); }
+    .timeline-icon { width: 80px; height: 80px; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #e8f5e9; color: var(--agri-green); font-size: 2rem; transition: background-color .2s ease, color .2s ease, transform .2s ease; }
+    .timeline-step:hover .timeline-icon { background: var(--agri-green); color: var(--agri-gold); transform: scale(1.05); }
+    .filter-btn { margin: 0 5px 10px; padding: 6px 20px; border-radius: 50px; font-weight: 600; }
+    .filter-btn.active { color: #fff; background: var(--agri-green); border-color: var(--agri-green); }
+    .product-card { height: 100%; overflow: hidden; border: 0; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,.06); transition: box-shadow .2s ease, transform .2s ease; }
+    .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,.12); }
+    .product-img { display: block; width: 100%; height: 220px; object-fit: cover; background: #eef1ed; }
+    .product-badge { position: absolute; top: 15px; right: 15px; z-index: 1; padding: 5px 12px; border-radius: 20px; font-size: .8rem; }
+    footer { color: #a5b1a9; background: #072913; }
+    footer h5 { margin-bottom: 20px; color: var(--agri-gold); font-weight: 600; }
+    footer a { color: #c1cbc4; text-decoration: none; }
+    footer a:hover, footer a:focus-visible { color: var(--agri-gold); }
+    .float-wa { position: fixed; z-index: 100; right: 24px; bottom: 24px; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #25d366; color: #fff; font-size: 29px; text-decoration: none; box-shadow: 2px 2px 15px rgba(0,0,0,.2); transition: transform .2s ease, background-color .2s ease; }
+    .float-wa:hover, .float-wa:focus-visible { background: #128c7e; color: #fff; transform: scale(1.06); }
+    .translate-trigger { padding: 5px 12px; border: 1px solid rgba(255,255,255,.45); border-radius: 20px; background: transparent; color: #fff; font-size: .8rem; }
+    #google_translate_element { margin-top: 8px; }
+    #google_translate_element select { max-width: 100%; padding: 5px 10px; border: 0; border-radius: 20px; font-size: .8rem; }
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 3px solid #f0ad00; outline-offset: 3px; }
+    @media (max-width: 767.98px) {
+      .hero-section { min-height: 78vh; padding: 48px 0 72px; }
+      .stats-ribbon { transform: translateY(-28px); margin-bottom: -28px; }
+      .float-wa { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+    }
+  </style>
+
+  <!-- Bootstrap JavaScript is deferred so it does not block HTML parsing. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-leaf me-2"></i>AGRI SUKSES</a>
-            <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars fs-2"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#catalog">Commodities</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#export-info">Export Info</a></li>
-                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                        <div id="google_translate_element"></div>
-                    </li>
-                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
-                        <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('General Partnership')">Request Quote</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section text-center text-lg-start">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8 col-md-10 mx-auto mx-lg-0">
-                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">#1 Trusted Indonesian Exporter</span>
-                    <h1 class="display-4 fw-bold mb-3 lh-sm">Connecting Indonesia's Finest Harvest to the World</h1>
-                    <p class="lead mb-4 fw-light">We source, process, and export premium-grade spices, coffee, cocoa, and agricultural derivatives directly from local farmers to global B2B markets.</p>
-                    <a href="#catalog" class="btn btn-cta btn-lg mb-3 mb-sm-0 me-sm-3"><i class="fa-solid fa-box-open me-2"></i>Explore Catalog</a>
-                    <a href="katalog-agrisukses.pdf" download class="btn btn-outline-light btn-lg mb-3 mb-sm-0"><i class="fa-solid fa-file-pdf me-2"></i>Download e-Catalog</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Ribbon -->
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="Main navigation">
     <div class="container">
-        <div class="row stats-ribbon text-center mx-2 mx-lg-0">
-            <div class="col-md-3 col-6 border-end mb-3 mb-md-0"><h2 class="text-success fw-bold"><i class="fa-solid fa-globe me-2"></i>15+</h2><p class="text-muted small fw-bold text-uppercase mb-0">Countries</p></div>
-            <div class="col-md-3 col-6 border-end mb-3 mb-md-0"><h2 class="text-success fw-bold"><i class="fa-solid fa-tractor me-2"></i>50+</h2><p class="text-muted small fw-bold text-uppercase mb-0">Farm Partners</p></div>
-            <div class="col-md-3 col-6 border-end"><h2 class="text-success fw-bold"><i class="fa-solid fa-scale-balanced me-2"></i>10K+</h2><p class="text-muted small fw-bold text-uppercase mb-0">Tons Exported</p></div>
-            <div class="col-md-3 col-6"><h2 class="text-success fw-bold"><i class="fa-solid fa-certificate me-2"></i>100%</h2><p class="text-muted small fw-bold text-uppercase mb-0">Quality Assured</p></div>
-        </div>
+      <a class="navbar-brand" href="#home"><i class="fa-solid fa-leaf me-2" aria-hidden="true"></i>AGRI SUKSES</a>
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fs-2" aria-hidden="true"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalog">Commodities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#export-info">Export Info</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <button class="translate-trigger" id="translateToggle" type="button" aria-expanded="false" aria-controls="google_translate_element">Translate</button>
+            <div id="google_translate_element" hidden></div>
+          </li>
+          <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+            <button class="btn btn-cta" type="button" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('General Partnership')">Request Quote</button>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Export Timeline / Supply Chain -->
-    <section class="py-5 bg-white" style="margin-top: 50px;">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-5" style="color: #0d4722;">Our Export Supply Chain</h2>
-            <div class="row">
-                <div class="col-md-3 col-6 mb-4 timeline-step">
-                    <div class="timeline-icon"><i class="fa-solid fa-tractor"></i></div>
-                    <h5 class="fw-bold">1. Sourcing</h5>
-                    <p class="text-muted small">Directly harvested from our trusted local partner farmers.</p>
-                </div>
-                <div class="col-md-3 col-6 mb-4 timeline-step">
-                    <div class="timeline-icon"><i class="fa-solid fa-industry"></i></div>
-                    <h5 class="fw-bold">2. Processing</h5>
-                    <p class="text-muted small">Sorted and processed under strict Quality Control standards.</p>
-                </div>
-                <div class="col-md-3 col-6 mb-4 timeline-step">
-                    <div class="timeline-icon"><i class="fa-solid fa-box"></i></div>
-                    <h5 class="fw-bold">3. Packaging</h5>
-                    <p class="text-muted small">Safely packed in industrial-grade export materials.</p>
-                </div>
-                <div class="col-md-3 col-6 mb-4 timeline-step">
-                    <div class="timeline-icon"><i class="fa-solid fa-ship"></i></div>
-                    <h5 class="fw-bold">4. Shipping</h5>
-                    <p class="text-muted small">Delivered globally via FOB or CIF to your destination port.</p>
-                </div>
-            </div>
+  <!-- Hero -->
+  <header class="hero-section text-center text-lg-start" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 col-md-10 mx-auto mx-lg-0">
+          <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold">#1 Trusted Indonesian Exporter</span>
+          <h1 class="display-4 fw-bold mb-3 lh-sm">Connecting Indonesia's Finest Harvest to the World</h1>
+          <p class="lead mb-4 fw-light">We source, process, and export premium-grade spices, coffee, cocoa, and agricultural derivatives directly from local farmers to global B2B markets.</p>
+          <a href="#catalog" class="btn btn-cta btn-lg mb-3 mb-sm-0 me-sm-3"><i class="fa-solid fa-box-open me-2" aria-hidden="true"></i>Explore Catalog</a>
+          <a href="katalog-agrisukses.pdf" download class="btn btn-outline-light btn-lg mb-3 mb-sm-0"><i class="fa-solid fa-file-pdf me-2" aria-hidden="true"></i>Download e-Catalog</a>
         </div>
-    </section>
-
-    <!-- Catalog Section -->
-    <section id="catalog" class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="fw-bold" style="color: #0d4722;">Our Product Catalog</h2>
-                <p class="text-muted">Select a category to filter our premium commodities.</p>
-            </div>
-            
-            <!-- Filter Buttons -->
-            <div class="text-center mb-5">
-                <button class="btn btn-outline-success filter-btn active" data-filter="all">All Products</button>
-                <button class="btn btn-outline-success filter-btn" data-filter="coffee">Coffee</button>
-                <button class="btn btn-outline-success filter-btn" data-filter="spices">Spices</button>
-                <button class="btn btn-outline-success filter-btn" data-filter="cocoa">Cocoa</button>
-                <button class="btn btn-outline-success filter-btn" data-filter="other">Others</button>
-            </div>
-
-            <!-- Product Grid -->
-            <div class="row" id="productGrid">
-                
-                <div class="col-lg-3 col-md-6 mb-4 product-item coffee">
-                    <div class="card product-card position-relative">
-                        <span class="badge bg-success product-badge">Coffee</span>
-                        <img src="arabika.jpg" class="product-img" alt="Arabica Coffee">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Sumatra Arabica</h5>
-                            <p class="text-muted small flex-grow-1">Grade 1 green coffee beans. Famous for its earthy and complex flavor profile.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Sumatra Arabica Green Beans')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 product-item coffee">
-                    <div class="card product-card position-relative">
-                        <span class="badge bg-success product-badge">Coffee</span>
-                        <img src="robusta.jpg" class="product-img" alt="Robusta Coffee">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Java Robusta</h5>
-                            <p class="text-muted small flex-grow-1">Strong body and low acidity. Perfect for espresso blends and instant coffee manufacturing.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Java Robusta Green Beans')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 product-item spices">
-                    <div class="card product-card position-relative">
-                        <span class="badge bg-warning text-dark product-badge">Spices</span>
-                        <img src="cinnamon.jpg" class="product-img" alt="Cassia Cinnamon">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Cassia Cinnamon</h5>
-                            <p class="text-muted small flex-grow-1">High-quality rolled cinnamon sticks (Cassia Vera) from Kerinci, Jambi.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Cassia Cinnamon Sticks')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 product-item spices">
-                    <div class="card product-card position-relative">
-                        <span class="badge bg-warning text-dark product-badge">Spices</span>
-                        <img src="pepper.jpg" class="product-img" alt="Black Pepper">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Lampung Black Pepper</h5>
-                            <p class="text-muted small flex-grow-1">Premium whole black peppercorns with bold aroma and high piperine content.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Lampung Black Peppercorn')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 product-item spices">
-                    <div class="card product-card position-relative">
-                        <span class="badge bg-warning text-dark product-badge">Spices</span>
-                        <img src="vanilla.jpg" class="product-img" alt="Vanilla Beans">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Planifolia Vanilla</h5>
-                            <p class="text-muted small flex-grow-1">Gourmet grade Indonesian vanilla beans, highly moist and rich in vanillin.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Planifolia Vanilla Beans')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 product-item cocoa">
-                    <div class="card product-card position-relative">
-                        <span class="badge product-badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
-                        <img src="cocoa-beans.jpg" class="product-img" alt="Raw Cocoa Beans">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Fermented Cocoa Beans</h5>
-                            <p class="text-muted small flex-grow-1">Well-fermented and sun-dried raw cocoa beans from Sulawesi.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Fermented Cocoa Beans')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 product-item cocoa">
-                    <div class="card product-card position-relative">
-                        <span class="badge product-badge" style="background-color: #6f4e37; color: white;">Cocoa</span>
-                        <img src="cocoa-powder.jpg" class="product-img" alt="Cocoa Powder">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Alkalized Cocoa Powder</h5>
-                            <p class="text-muted small flex-grow-1">Processed industrial-grade cocoa powder with deep color and rich chocolate flavor.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Alkalized Cocoa Powder')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 product-item other">
-                    <div class="card product-card position-relative">
-                        <span class="badge bg-secondary product-badge">Other</span>
-                        <img src="charcoal.jpg" class="product-img" alt="Coconut Charcoal">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold text-dark">Coconut Briquettes</h5>
-                            <p class="text-muted small flex-grow-1">100% natural coconut shell charcoal briquettes for Shisha/Hookah & BBQ. Long burning.</p>
-                            <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Coconut Charcoal Briquettes')">Request Info</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Container Loading Info -->
-    <section id="export-info" class="py-5 bg-white">
-        <div class="container">
-            <h3 class="fw-bold text-center mb-4" style="color: #0d4722;">Packaging & Loading Capacity</h3>
-            <div class="table-responsive w-100 mx-auto">
-                <table class="table table-bordered table-striped text-center align-middle">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Product</th>
-                            <th>Packaging Type</th>
-                            <th>Capacity (20ft Container)</th>
-                            <th>Capacity (40ft Container)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="fw-semibold">Coffee Beans</td>
-                            <td>60kg Jute Bag</td>
-                            <td>Approx. 19.2 Tons (320 bags)</td>
-                            <td>Approx. 27.0 Tons</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-semibold">Coconut Charcoal</td>
-                            <td>10kg Master Box</td>
-                            <td>Approx. 18.0 Tons</td>
-                            <td>Approx. 26.0 Tons</td>
-                        </tr>
-                        <tr>
-                            <td class="fw-semibold">Spices (General)</td>
-                            <td>Vacuum Bag + Carton</td>
-                            <td>Depends on Volume Ratio</td>
-                            <td>Depends on Volume Ratio</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <h2 class="fw-bold text-center mb-5" style="color: #0d4722;">Frequently Asked Questions (FAQ)</h2>
-            <div class="accordion w-lg-75 mx-auto" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What is your Minimum Order Quantity (MOQ)?</button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Our standard MOQ is <strong>1x20ft FCL (Full Container Load)</strong>. However, we accept LCL (Less than Container Load) shipments for samples with a minimum order of 1 Metric Ton.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What are your payment terms?</button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">We accept <strong>Telegraphic Transfer (T/T)</strong> with 50% advance payment and 50% balance before shipment, or <strong>100% Irrevocable Letter of Credit (L/C) at sight</strong> from prime banks.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Can I request a product sample?</button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">Yes, we provide free samples up to 1 Kg. Buyers only need to cover the international courier shipping fees (via DHL/FedEx).</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Real Modal Form (Terkoneksi ke Formspree) -->
-    <div class="modal fade" id="quoteModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content border-0 shadow-lg">
-                <div class="modal-header text-white" style="background-color: #0d4722;">
-                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-envelope-open-text me-2"></i>Send B2B Inquiry</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body p-4">
-                    <form action="URL_FORMSPREE_ANDA_DISINI" method="POST" id="realInquiryForm">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label fw-semibold small">Full Name</label>
-                                <input type="text" name="name" class="form-control bg-light" required placeholder="John Doe">
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label class="form-label fw-semibold small">Company Name</label>
-                                <input type="text" name="company" class="form-control bg-light" required placeholder="Global Import LLC">
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold small">Email Address</label>
-                            <input type="email" name="email" class="form-control bg-light" required placeholder="john@company.com">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-semibold small">Product of Interest</label>
-                            <input type="text" name="product" class="form-control fw-bold text-success" id="productField" readonly>
-                        </div>
-                        <div class="mb-4">
-                            <label class="form-label fw-semibold small">Specification & Quantity Requirement</label>
-                            <textarea name="message" class="form-control bg-light" rows="3" required placeholder="E.g., We need 1 FCL 20ft container to port of Rotterdam..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-cta w-100 rounded-3">Submit Inquiry <i class="fa-solid fa-paper-plane ms-2"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </header>
 
-    <!-- Floating WhatsApp Chat -->
-    <a href="https://api.whatsapp.com/send?phone=6282221511561&text=Hello%20PT%20Agri%20Sukses%20Exportindo,%20I%20am%20interested%20in%20your%20commodities..." class="float-wa" target="_blank" title="Chat with us on WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+  <!-- Company statistics -->
+  <div class="container" aria-label="Company statistics">
+    <div class="row stats-ribbon text-center mx-2 mx-lg-0">
+      <div class="col-md-3 col-6 border-end mb-3 mb-md-0"><h2 class="text-success fw-bold"><i class="fa-solid fa-globe me-2" aria-hidden="true"></i>15+</h2><p class="text-muted small fw-bold text-uppercase mb-0">Countries</p></div>
+      <div class="col-md-3 col-6 border-end mb-3 mb-md-0"><h2 class="text-success fw-bold"><i class="fa-solid fa-tractor me-2" aria-hidden="true"></i>50+</h2><p class="text-muted small fw-bold text-uppercase mb-0">Farm Partners</p></div>
+      <div class="col-md-3 col-6 border-end"><h2 class="text-success fw-bold"><i class="fa-solid fa-scale-balanced me-2" aria-hidden="true"></i>10K+</h2><p class="text-muted small fw-bold text-uppercase mb-0">Tons Exported</p></div>
+      <div class="col-md-3 col-6"><h2 class="text-success fw-bold"><i class="fa-solid fa-certificate me-2" aria-hidden="true"></i>100%</h2><p class="text-muted small fw-bold text-uppercase mb-0">Quality Assured</p></div>
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 mb-4 mb-lg-0">
-                    <h4 class="text-white fw-bold mb-3"><i class="fa-solid fa-leaf text-warning me-2"></i>AGRI SUKSES</h4>
-                    <p class="small pe-lg-5">Bridging Indonesian agriculture to the world. We are committed to sustainability, quality assurance, and providing the best sourcing experience for our global partners.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="#">Company Profile</a></li>
-                        <li class="mb-2"><a href="#catalog">Our Commodities</a></li>
-                        <li class="mb-2"><a href="#">Quality Control & Export Terms</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5>Contact Us</h5>
-                    <ul class="list-unstyled small">
-                        <li class="mb-2"><i class="fa-solid fa-envelope me-2 text-warning"></i> export@agrisuksesexportindo.com</li>
-                        <li class="mb-2"><i class="fa-solid fa-phone me-2 text-warning"></i> +62-822-2151-1561</li>
-                        <li class="mb-2"><i class="fa-solid fa-map-location-dot me-2 text-warning"></i> Ciganjur, South Jakarta, Indonesia</li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="border-secondary mt-4 mb-4">
-            <div class="text-center small">
-                &copy; 2026 PT Agri Sukses Exportindo. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
+  <!-- Company / supply-chain overview -->
+  <section class="py-5 bg-white" id="about" style="margin-top:50px" aria-labelledby="supply-chain-title">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5" id="supply-chain-title" style="color:#0d4722">Our Export Supply Chain</h2>
+      <div class="row">
+        <div class="col-md-3 col-6 mb-4 timeline-step"><div class="timeline-icon"><i class="fa-solid fa-tractor" aria-hidden="true"></i></div><h3 class="h5 fw-bold">1. Sourcing</h3><p class="text-muted small">Directly harvested from our trusted local partner farmers.</p></div>
+        <div class="col-md-3 col-6 mb-4 timeline-step"><div class="timeline-icon"><i class="fa-solid fa-industry" aria-hidden="true"></i></div><h3 class="h5 fw-bold">2. Processing</h3><p class="text-muted small">Sorted and processed under strict Quality Control standards.</p></div>
+        <div class="col-md-3 col-6 mb-4 timeline-step"><div class="timeline-icon"><i class="fa-solid fa-box" aria-hidden="true"></i></div><h3 class="h5 fw-bold">3. Packaging</h3><p class="text-muted small">Safely packed in industrial-grade export materials.</p></div>
+        <div class="col-md-3 col-6 mb-4 timeline-step"><div class="timeline-icon"><i class="fa-solid fa-ship" aria-hidden="true"></i></div><h3 class="h5 fw-bold">4. Shipping</h3><p class="text-muted small">Delivered globally via FOB or CIF to your destination port.</p></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap & Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Script Google Translate -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!-- Product catalog -->
+  <section id="catalog" class="py-5 bg-light" aria-labelledby="catalog-title">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold" id="catalog-title" style="color:#0d4722">Our Product Catalog</h2>
+        <p class="text-muted">Select a category to filter our premium commodities.</p>
+      </div>
+      <div class="text-center mb-5" role="group" aria-label="Filter products by category">
+        <button type="button" class="btn btn-outline-success filter-btn active" data-filter="all" aria-pressed="true">All Products</button>
+        <button type="button" class="btn btn-outline-success filter-btn" data-filter="coffee" aria-pressed="false">Coffee</button>
+        <button type="button" class="btn btn-outline-success filter-btn" data-filter="spices" aria-pressed="false">Spices</button>
+        <button type="button" class="btn btn-outline-success filter-btn" data-filter="cocoa" aria-pressed="false">Cocoa</button>
+        <button type="button" class="btn btn-outline-success filter-btn" data-filter="other" aria-pressed="false">Others</button>
+      </div>
 
-    <script>
-        // Script Filter Kategori
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const productItems = document.querySelectorAll('.product-item');
+      <div class="row" id="productGrid">
+        <div class="col-lg-3 col-md-6 mb-4 product-item coffee"><article class="card product-card position-relative"><span class="badge bg-success product-badge">Coffee</span><img src="arabika.jpg" class="product-img" alt="Sumatra Arabica green coffee beans" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Sumatra Arabica</h3><p class="text-muted small flex-grow-1">Grade 1 green coffee beans. Famous for its earthy and complex flavor profile.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Sumatra Arabica Green Beans')">Request Info</button></div></article></div>
+        <div class="col-lg-3 col-md-6 mb-4 product-item coffee"><article class="card product-card position-relative"><span class="badge bg-success product-badge">Coffee</span><img src="robusta.jpg" class="product-img" alt="Java Robusta green coffee beans" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Java Robusta</h3><p class="text-muted small flex-grow-1">Strong body and low acidity. Perfect for espresso blends and instant coffee manufacturing.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Java Robusta Green Beans')">Request Info</button></div></article></div>
+        <div class="col-lg-3 col-md-6 mb-4 product-item spices"><article class="card product-card position-relative"><span class="badge bg-warning text-dark product-badge">Spices</span><img src="cinnamon.jpg" class="product-img" alt="Cassia cinnamon sticks" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Cassia Cinnamon</h3><p class="text-muted small flex-grow-1">High-quality rolled cinnamon sticks (Cassia Vera) from Kerinci, Jambi.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Cassia Cinnamon Sticks')">Request Info</button></div></article></div>
+        <div class="col-lg-3 col-md-6 mb-4 product-item spices"><article class="card product-card position-relative"><span class="badge bg-warning text-dark product-badge">Spices</span><img src="pepper.jpg" class="product-img" alt="Lampung black peppercorns" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Lampung Black Pepper</h3><p class="text-muted small flex-grow-1">Premium whole black peppercorns with bold aroma and high piperine content.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Lampung Black Peppercorn')">Request Info</button></div></article></div>
+        <div class="col-lg-3 col-md-6 mb-4 product-item spices"><article class="card product-card position-relative"><span class="badge bg-warning text-dark product-badge">Spices</span><img src="vanilla.jpg" class="product-img" alt="Indonesian planifolia vanilla beans" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Planifolia Vanilla</h3><p class="text-muted small flex-grow-1">Gourmet grade Indonesian vanilla beans, highly moist and rich in vanillin.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Planifolia Vanilla Beans')">Request Info</button></div></article></div>
+        <div class="col-lg-3 col-md-6 mb-4 product-item cocoa"><article class="card product-card position-relative"><span class="badge product-badge" style="background:#6f4e37;color:#fff">Cocoa</span><img src="cocoa-beans.jpg" class="product-img" alt="Fermented raw cocoa beans from Sulawesi" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Fermented Cocoa Beans</h3><p class="text-muted small flex-grow-1">Well-fermented and sun-dried raw cocoa beans from Sulawesi.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Fermented Cocoa Beans')">Request Info</button></div></article></div>
+        <div class="col-lg-3 col-md-6 mb-4 product-item cocoa"><article class="card product-card position-relative"><span class="badge product-badge" style="background:#6f4e37;color:#fff">Cocoa</span><img src="cocoa-powder.jpg" class="product-img" alt="Alkalized cocoa powder" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Alkalized Cocoa Powder</h3><p class="text-muted small flex-grow-1">Processed industrial-grade cocoa powder with deep color and rich chocolate flavor.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Alkalized Cocoa Powder')">Request Info</button></div></article></div>
+        <div class="col-lg-3 col-md-6 mb-4 product-item other"><article class="card product-card position-relative"><span class="badge bg-secondary product-badge">Other</span><img src="charcoal.jpg" class="product-img" alt="Coconut shell charcoal briquettes" width="600" height="400" loading="lazy" decoding="async"><div class="card-body d-flex flex-column"><h3 class="h5 fw-bold text-dark">Coconut Briquettes</h3><p class="text-muted small flex-grow-1">100% natural coconut shell charcoal briquettes for Shisha/Hookah &amp; BBQ. Long burning.</p><button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#quoteModal" onclick="setProduct('Coconut Charcoal Briquettes')">Request Info</button></div></article></div>
+      </div>
+    </div>
+  </section>
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+  <!-- Export information -->
+  <section id="export-info" class="py-5 bg-white" aria-labelledby="export-info-title">
+    <div class="container">
+      <h2 class="h3 fw-bold text-center mb-4" id="export-info-title" style="color:#0d4722">Packaging &amp; Loading Capacity</h2>
+      <div class="table-responsive w-100 mx-auto">
+        <table class="table table-bordered table-striped text-center align-middle">
+          <caption class="visually-hidden">Packaging types and estimated container loading capacities by product.</caption>
+          <thead class="table-dark"><tr><th scope="col">Product</th><th scope="col">Packaging Type</th><th scope="col">Capacity (20ft Container)</th><th scope="col">Capacity (40ft Container)</th></tr></thead>
+          <tbody>
+            <tr><th scope="row" class="fw-semibold">Coffee Beans</th><td>60kg Jute Bag</td><td>Approx. 19.2 Tons (320 bags)</td><td>Approx. 27.0 Tons</td></tr>
+            <tr><th scope="row" class="fw-semibold">Coconut Charcoal</th><td>10kg Master Box</td><td>Approx. 18.0 Tons</td><td>Approx. 26.0 Tons</td></tr>
+            <tr><th scope="row" class="fw-semibold">Spices (General)</th><td>Vacuum Bag + Carton</td><td>Depends on Volume Ratio</td><td>Depends on Volume Ratio</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-                const filterValue = btn.getAttribute('data-filter');
+  <!-- FAQ -->
+  <section class="py-5 bg-light" aria-labelledby="faq-title">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-5" id="faq-title" style="color:#0d4722">Frequently Asked Questions (FAQ)</h2>
+      <div class="accordion w-lg-75 mx-auto" id="faqAccordion">
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">What is your Minimum Order Quantity (MOQ)?</button></h3><div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Our standard MOQ is <strong>1x20ft FCL (Full Container Load)</strong>. However, we accept LCL (Less than Container Load) shipments for samples with a minimum order of 1 Metric Ton.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">What are your payment terms?</button></h3><div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">We accept <strong>Telegraphic Transfer (T/T)</strong> with 50% advance payment and 50% balance before shipment, or <strong>100% Irrevocable Letter of Credit (L/C) at sight</strong> from prime banks.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Can I request a product sample?</button></h3><div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes, we provide free samples up to 1 Kg. Buyers only need to cover the international courier shipping fees (via DHL/FedEx).</div></div></div>
+      </div>
+    </div>
+  </section>
 
-                productItems.forEach(item => {
-                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
+  <!-- B2B inquiry modal. Replace the action with the real Formspree endpoint before launch. -->
+  <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content border-0 shadow-lg">
+      <div class="modal-header text-white" style="background:#0d4722"><h2 class="h5 modal-title fw-bold" id="quoteModalTitle"><i class="fa-solid fa-envelope-open-text me-2" aria-hidden="true"></i>Send B2B Inquiry</h2><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close inquiry form"></button></div>
+      <div class="modal-body p-4">
+        <form action="URL_FORMSPREE_ANDA_DISINI" method="POST" id="realInquiryForm">
+          <div class="row">
+            <div class="col-md-6 mb-3"><label for="inquiryName" class="form-label fw-semibold small">Full Name</label><input id="inquiryName" type="text" name="name" class="form-control bg-light" required autocomplete="name" placeholder="John Doe"></div>
+            <div class="col-md-6 mb-3"><label for="inquiryCompany" class="form-label fw-semibold small">Company Name</label><input id="inquiryCompany" type="text" name="company" class="form-control bg-light" required autocomplete="organization" placeholder="Global Import LLC"></div>
+          </div>
+          <div class="mb-3"><label for="inquiryEmail" class="form-label fw-semibold small">Email Address</label><input id="inquiryEmail" type="email" name="email" class="form-control bg-light" required autocomplete="email" placeholder="john@company.com"></div>
+          <div class="mb-3"><label for="productField" class="form-label fw-semibold small">Product of Interest</label><input type="text" name="product" class="form-control fw-bold text-success" id="productField" readonly></div>
+          <div class="mb-4"><label for="inquiryMessage" class="form-label fw-semibold small">Specification &amp; Quantity Requirement</label><textarea id="inquiryMessage" name="message" class="form-control bg-light" rows="3" required placeholder="E.g., We need 1 FCL 20ft container to port of Rotterdam..."></textarea></div>
+          <button type="submit" class="btn btn-cta w-100 rounded-3">Submit Inquiry <i class="fa-solid fa-paper-plane ms-2" aria-hidden="true"></i></button>
+        </form>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=6282221511561&amp;text=Hello%20PT%20Agri%20Sukses%20Exportindo,%20I%20am%20interested%20in%20your%20commodities..." class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with PT Agri Sukses Exportindo on WhatsApp" title="Chat with us on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+
+  <!-- Footer -->
+  <footer class="py-5">
+    <div class="container"><div class="row">
+      <div class="col-lg-5 mb-4 mb-lg-0"><h2 class="h4 text-white fw-bold mb-3"><i class="fa-solid fa-leaf text-warning me-2" aria-hidden="true"></i>AGRI SUKSES</h2><p class="small pe-lg-5">Bridging Indonesian agriculture to the world. We are committed to sustainability, quality assurance, and providing the best sourcing experience for our global partners.</p></div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0"><h3 class="h5">Quick Links</h3><ul class="list-unstyled small"><li class="mb-2"><a href="#about">Company Profile</a></li><li class="mb-2"><a href="#catalog">Our Commodities</a></li><li class="mb-2"><a href="#export-info">Quality Control &amp; Export Terms</a></li></ul></div>
+      <div class="col-lg-4 col-md-6"><h3 class="h5">Contact Us</h3><ul class="list-unstyled small"><li class="mb-2"><i class="fa-solid fa-envelope me-2 text-warning" aria-hidden="true"></i>export@agrisuksesexportindo.com</li><li class="mb-2"><i class="fa-solid fa-phone me-2 text-warning" aria-hidden="true"></i>+62-822-2151-1561</li><li class="mb-2"><i class="fa-solid fa-map-location-dot me-2 text-warning" aria-hidden="true"></i>Ciganjur, South Jakarta, Indonesia</li></ul></div>
+    </div><hr class="border-secondary mt-4 mb-4"><div class="text-center small">&copy; 2026 PT Agri Sukses Exportindo. All Rights Reserved.</div></div>
+  </footer>
+
+  <script>
+    // Keep product-category filtering functional without depending on extra libraries.
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productItems = document.querySelectorAll('.product-item');
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const selected = button.dataset.filter;
+        filterButtons.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle('active', active);
+          item.setAttribute('aria-pressed', String(active));
         });
-
-        // Script Form Pop-Up
-        function setProduct(productName) {
-            document.getElementById('productField').value = productName;
-        }
-
-        // Script UX Form Loading
-        document.getElementById('realInquiryForm').addEventListener('submit', function() {
-            const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Routing Inquiry...';
+        productItems.forEach((product) => {
+          product.hidden = !(selected === 'all' || product.classList.contains(selected));
         });
-    </script>
+      });
+    });
+
+    // Used by the existing quote buttons to populate the inquiry modal.
+    window.setProduct = function setProduct(productName) {
+      const productField = document.getElementById('productField');
+      if (productField) productField.value = productName;
+    };
+
+    // Load Google Translate only when a visitor asks for it, avoiding a third-party
+    // script and its network chain during the initial page render.
+    const translateToggle = document.getElementById('translateToggle');
+    const translateContainer = document.getElementById('google_translate_element');
+    let translateScriptStarted = false;
+    window.googleTranslateElementInit = function googleTranslateElementInit() {
+      if (window.google && window.google.translate) {
+        new window.google.translate.TranslateElement({
+          pageLanguage: 'en',
+          layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    };
+    translateToggle.addEventListener('click', () => {
+      const willOpen = translateContainer.hidden;
+      translateContainer.hidden = !willOpen;
+      translateToggle.setAttribute('aria-expanded', String(willOpen));
+      if (willOpen && !translateScriptStarted) {
+        translateScriptStarted = true;
+        const script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true;
+        script.onerror = () => { translateScriptStarted = false; };
+        document.head.appendChild(script);
+      }
+    });
+
+    // Prevent repeated form submission and provide immediate feedback.
+    const inquiryForm = document.getElementById('realInquiryForm');
+    inquiryForm.addEventListener('submit', () => {
+      const submitButton = inquiryForm.querySelector('button[type="submit"]');
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending inquiry...';
+      }
+    });
+  </script>
 </body>
 </html>
