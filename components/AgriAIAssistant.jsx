@@ -2,6 +2,18 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 
+import AgriAIAssistant from './components/AgriAIAssistant';
+
+export default function App() {
+  return (
+    <>
+      {/* Konten website yang sudah ada */}
+      
+      <AgriAIAssistant />
+    </>
+  );
+}
+
 const starterPrompts = [
   'Apa saja produk ekspor Agri Sukses?',
   'Jelaskan MOQ dan spesifikasi vanili Papua.',
